@@ -1,1 +1,37 @@
-<p>This is the partial for view 1.</p>
+<div class="row">
+  <div class=" col-md-offset-3 col-md-6 col-sm-12">
+
+    <div class="alert alert-info text-center btn-lg">
+      <strong>Today is </strong> {{todayDate | date:'dd/MM/yyyy'}}
+    </div>
+
+    <div class="devider"></div>
+
+    <h2>Finished Projects</h2>
+    <p class="bs-component">
+      <a href="#!/finishedProjects" class="btn btn-success btn-lg btn-block">{{finishedCount}}</a>
+    </p>
+
+    <div class="list-group">
+      <a href="#!/project/{{item.id}}" class="list-group-item" ng-repeat="item in finishedProjects">
+        <h4 class="list-group-item-heading">{{item.name}}</h4>
+        <p class="list-group-item-text">{{item.startDate}} - {{item.finishDate}}</p>
+      </a>
+    </div>
+
+    <div class="devider"></div>
+
+    <h2>Projects in process</h2>
+    <p class="bs-component">
+      <a href="#!/inprogressProjects" class="btn btn-warning btn-lg btn-block">{{inprogressCount}}</a>
+    </p>
+
+    <div class="list-group">
+      <a href="#!/project/{{item.id}}" class="list-group-item" ng-repeat="item in inprogressProjects">
+        <h4 class="list-group-item-heading">{{item.name}}</h4>
+        <p class="list-group-item-text">{{item.stageName}} {{item.progress}}%</p>
+      </a>
+    </div>
+
+  </div>
+</div>

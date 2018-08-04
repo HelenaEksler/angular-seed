@@ -23,3 +23,22 @@
   content: "|";
   padding-right: 0.3em;
 }
+
+.devider {
+  margin: 20px 0px;
+  height: 30px;
+  width: 100%;
+}
+
+.chart-container {
+  margin-bottom: 30px;
+}
+
+.chart {
+  margin-bottom: 15px;
+}
+
+span.glyphicon {
+  margin-right: 10px;
+  margin-left: 10px;
+}
