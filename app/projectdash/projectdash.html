@@ -1,0 +1,64 @@
+<div class="row">
+  <div class="col-lg-10 col-lg-offset-1 col-md-12">
+    <h2>{{project.name}}</h1>
+  </div>
+</div>
+<div class="row">
+  <div class="col-lg-10 col-lg-offset-1 col-md-12">
+    <div class="progress">
+  <div class="progress-bar progress-bar-info" ng-style="{'width': project.progress + '%'}"></div>
+</div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-lg-10 col-lg-offset-1 col-md-12">
+    <div class="panel-group" id="accordion">
+
+      <div class="panel panel-default" ng-repeat="(key,stage) in project.stages">
+        <div class="panel-heading">
+          <h4 class="panel-title">
+            <a data-toggle="collapse" data-parent="#accordion" data-target="#collapse{{$index}}" href="">
+              <span class="glyphicon" ng-class="icons[key]"></span>
+              {{stageLabels[key]}} {{stage.progress}}%
+            </a>
+          </h4>
+        </div>
+        <div id="collapse{{$index}}" class="panel-collapse collapse" ng-class="{'in': project.activeStage == key}">
+          <div class="panel-body">
+            <div class="row">
+              <div class="col-sm-4">
+                <p>Total Hours</p>
+                <span class="btn btn-default">{{stage.totalHours}}</span>
+              </div>
+              <div class="col-sm-4" ng-if="stage.progress > 0">
+                <p>Start Date</p>
+                <span class="btn btn-default">{{stage.startDate}}</span>
+              </div>
+              <div class="col-sm-4" ng-if="stage.progress == 100">
+                <p>Finish Date</p>
+                <span class="btn btn-default">{{stage.startDate}}</span>
+              </div>
+              <div class="col-sm-4" ng-if="stage.progress != 100 && stage.progress != 0">
+                <a href="#" class="btn btn-success finish-btn">Finish</a>
+              </div>
+              <div class="col-sm-4" ng-if="stage.progress == 0">
+                <a href="#" class="btn btn-success finish-btn">Start</a>
+              </div>
+            </div>
+            <div class="devider"></div>
+            <div class="row">
+              <div class="col-sm-12">
+                <div class="list-group">
+                  <div class="list-group-item" ng-repeat="user in stage.people">
+                    {{user}}
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+  </div>
+</div>

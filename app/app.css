@@ -38,7 +38,14 @@
   margin-bottom: 15px;
 }
 
-span.glyphicon {
+span.glyphicon, span.icon-text {
   margin-right: 10px;
-  margin-left: 10px;
+}
+
+.alert > p.projName {
+  margin-bottom: 5px;
+}
+
+.finish-btn {
+  margin-top: 2em;
 }

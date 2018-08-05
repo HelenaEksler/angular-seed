@@ -9,11 +9,11 @@
 
     <h2>Finished Projects</h2>
     <p class="bs-component">
-      <a href="#!/finishedProjects" class="btn btn-success btn-lg btn-block">{{finishedCount}}</a>
+      <a href="/finishedProjects" class="btn btn-success btn-lg btn-block">{{finishedProjects.length}}</a>
     </p>
 
     <div class="list-group">
-      <a href="#!/project/{{item.id}}" class="list-group-item" ng-repeat="item in finishedProjects">
+      <a href="/projectdash/{{item.id}}" class="list-group-item" ng-repeat="item in finishedProjects">
         <h4 class="list-group-item-heading">{{item.name}}</h4>
         <p class="list-group-item-text">{{item.startDate}} - {{item.finishDate}}</p>
       </a>
@@ -23,13 +23,13 @@
 
     <h2>Projects in process</h2>
     <p class="bs-component">
-      <a href="#!/inprogressProjects" class="btn btn-warning btn-lg btn-block">{{inprogressCount}}</a>
+      <a href="/inprogressProjects" class="btn btn-warning btn-lg btn-block">{{inProgressProjects.length}}</a>
     </p>
 
     <div class="list-group">
-      <a href="#!/project/{{item.id}}" class="list-group-item" ng-repeat="item in inprogressProjects">
+      <a href="/projectdash/{{item.id}}" class="list-group-item" ng-repeat="item in inProgressProjects">
         <h4 class="list-group-item-heading">{{item.name}}</h4>
-        <p class="list-group-item-text">{{item.stageName}} {{item.progress}}%</p>
+        <p class="list-group-item-text">{{stageLabels[item.activeStage]}} {{item.progress}}%</p>
       </a>
     </div>
 
