@@ -16,12 +16,9 @@
   <script src="bower_components/html5-boilerplate/dist/js/vendor/modernizr-2.8.3.min.js"></script>
   <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
   <script src="utilities/bootstrap/js/bootstrap.js"></script>
+  <base href="/index.html">
 </head>
 <body>
-  <!-- <ul class="menu">
-    <li><a href="#!/view1">view1</a></li>
-    <li><a href="#!/view2">view2</a></li>
-  </ul> -->
 
   <!--[if lt IE 7]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
@@ -44,8 +41,9 @@
 
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-2">
               <ul class="nav navbar-nav">
-                <li><a href="#!/dashboard">Dashboard</a></li>
-                <li><a href="#!/finishedProjects">Finished Projects</a></li>
+                <li><a href="/">Dashboard</a></li>
+                <li><a href="/finishedProjects">Finished Projects</a></li>
+                <li><a href="/inprogressProjects">Projects In Progress</a></li>
               </ul>
             </div>
           </div>
@@ -60,7 +58,7 @@
       <div class="row">
         <div class="col-lg-12">
 
-          <p>Made by <a href="http://thomaspark.co" rel="nofollow">Helena Eksler, Serge Rozenfels and Alexey Timoshchenko</a>. </p>
+          <p>Made by <strong>Helena Eksler, Serge Rozenfeld and Alexey Timoshchenko</strong>. </p>
           <p>Based on <a href="https://getbootstrap.com" rel="nofollow">Bootstrap</a>. Icons from <a href="https://fortawesome.github.io/Font-Awesome/" rel="nofollow">Font Awesome</a>. Web fonts from <a href="https://www.google.com/webfonts" rel="nofollow">Google</a>.</p>
 
         </div>
@@ -76,8 +74,9 @@
   <script src="bower_components/angular-route/angular-route.js"></script>
   <script src="utilities/angular-resource.js"></script>
   <script src="app.js"></script>
-  <script src="view1/view1.js"></script>
-  <script src="view2/view2.js"></script>
+  <script src="dashboard/dashboard.js"></script>
+  <script src="finished/finished.js"></script>
+  <script src="inProgress/inProgress.js"></script>
   <script src="components/version/version.js"></script>
   <script src="components/version/version-directive.js"></script>
   <script src="components/version/interpolate-filter.js"></script>

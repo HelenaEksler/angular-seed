@@ -1,15 +1,15 @@
 'use strict';
 
-angular.module('myApp.view1', ['ngRoute', 'ngResource', 'chart.js'])
+angular.module('myApp.dashboard', ['ngRoute', 'ngResource', 'chart.js'])
 
 .config(['$routeProvider', function($routeProvider) {
-  $routeProvider.when('/dashboard', {
-    templateUrl: 'view1/view1.html',
-    controller: 'View1Ctrl'
+  $routeProvider.when('/', {
+    templateUrl: 'dashboard/dashboard.html',
+    controller: 'DashboardCtrl'
   });
 }])
 
-.controller('View1Ctrl', ['$scope', '$resource', function($scope, $resource) {
+.controller('DashboardCtrl', ['$scope', '$resource', function($scope, $resource) {
   $scope.todayDate = new Date();
   $scope.finishedCount = 27;
   $scope.finishedProjects = [

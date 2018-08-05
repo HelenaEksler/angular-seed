@@ -1,15 +1,15 @@
 'use strict';
 
-angular.module('myApp.view2', ['ngRoute'])
+angular.module('myApp.inProgress', ['ngRoute'])
 
 .config(['$routeProvider', function($routeProvider) {
-  $routeProvider.when('/finishedProjects', {
-    templateUrl: 'view2/view2.html',
-    controller: 'View2Ctrl'
+  $routeProvider.when('/inprogressProjects', {
+    templateUrl: 'inProgress/inProgress.html',
+    controller: 'InProgressCtrl'
   });
 }])
 
-.controller('View2Ctrl', ['$scope', '$resource', function($scope, $resource) {
+.controller('InProgressCtrl', ['$scope', '$resource', function($scope, $resource) {
 
   $scope.labels = ["Sales", "Concept", "Design", "Specs", "Development", "QA"];
   $scope.colors = ["#00bd5d", "#0300bd", "#bd009d", "#dccc09", "#00d8c4", "#d80000"];

@@ -4,13 +4,15 @@
 angular.module('myApp', [
   'ngRoute',
   'ngResource',
-  'myApp.view1',
-  'myApp.view2',
+  'myApp.dashboard',
+  'myApp.finished',
+  'myApp.inProgress',
   'myApp.version',
   'chart.js'
 ]).
 config(['$locationProvider', '$routeProvider', function($locationProvider, $routeProvider) {
-  $locationProvider.hashPrefix('!');
+  $locationProvider.html5Mode(true);
+  $locationProvider.hashPrefix('');
 
-  $routeProvider.otherwise({redirectTo: '/dashboard'});
+  // $routeProvider.otherwise({redirectTo: '/dashboard'});
 }]);

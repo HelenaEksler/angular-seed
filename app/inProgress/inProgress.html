@@ -1,0 +1,22 @@
+<div class="row">
+  <div class="col-xs-12">
+    <h2>Finished Projects</h1>
+  </div>
+</div>
+
+<div class="devider"></div>
+
+<div class="row">
+  <div class="col-lg-4" class="chart-container" ng-repeat="item in finishedProjects">
+    <canvas id="pie{{item.id}}" class="chart chart-pie"
+      chart-data="item.stages" chart-labels="labels" chart-colors="colors">
+    </canvas>
+
+    <div class="alert alert-info text-center btn-lg">
+      <strong>{{item.name}}</strong>
+      <br/>
+      <span class="glyphicon glyphicon-time"></span>{{item.totalHours}}
+      <span class="glyphicon glyphicon-user"></span>{{item.users}}
+    </div>
+  </div>
+</div>
