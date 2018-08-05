@@ -14,12 +14,16 @@
       </div>
     </div>
 
-    <div class="alert alert-info btn-lg">
-      <p class="projName"><strong>{{item.name}}</strong></p>
+    <a href="/projectdash/{{item.id}}">
+      <div class="alert alert-info btn-lg">
 
-      <span class="glyphicon" ng-class="icons[item.activeStage]"></span>
-      <span class="icon-text">{{item.activeStage}}</span>
-      <span class="icon-text">{{item.progress}}%</span>
-    </div>
+        <p class="projName"><strong>{{item.name}}</strong></p>
+
+        <span class="glyphicon" ng-class="icons[item.activeStage]"></span>
+        <span class="icon-text">{{stageLabels[item.activeStage]}}</span>
+        <span class="icon-text">{{item.progress}}%</span>
+
+      </div>
+    </a>
   </div>
 </div>
